@@ -1,0 +1,586 @@
+/* Basic Reset and Global Styles */
+html,
+body {
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, Arial, sans-serif;
+    background: #d8e6dd;
+}
+
+/* --- LOGIN LAYOUT --- */
+.login-body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.login-container {
+    width: 1000px;
+    display: flex;
+    background: #d8e6dd;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.login-left {
+    flex: 1;
+    padding: 40px;
+    text-align: center;
+    background: #d8e6dd;
+}
+
+.login-left .logo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.login-right {
+    flex: 1;
+    width: 400px;
+    border-radius: 6px;
+    padding: 48px;
+    background: #1b2130;
+    color: #fff;
+}
+
+.login-right h3 {
+    text-align: center;
+    font-size: 30px;
+    margin: 0 0 20px;
+}
+
+.login-right input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    border: none;
+}
+
+.login-right button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    background: #2fb02f;
+    color: #fff;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 270px;
+    height: 100%;
+    background: #1b2130;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+}
+
+/* NEW: Brand Container Styling (Ito ang naglilinya sa logo at text) */
+.brand {
+    display: flex;
+    /* Ginagawang magkatabi ang mga laman */
+    align-items: center;
+    /* I-center ang mga laman vertically */
+    gap: 10px;
+    /* Space sa pagitan ng text at logo */
+    margin-bottom: 25px;
+}
+
+/* Logo Image Styling */
+.brand-logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    /* Gaya na ginawa natin kanina */
+    object-fit: cover;
+}
+
+/* Logo Text Styling */
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    /* NEW: Para sa right alignment ng logo, hayaan itong lumaki */
+    flex-grow: 1;
+}
+
+/* ... (the rest of the CSS follows) ... */
+
+.main-title {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.sub-title {
+    font-size: 0.8em;
+    opacity: 0.7;
+}
+
+/* Dagdag na pagbabago: Gawin ding bilog ang profile picture */
+.profile-pic {
+    width: 40px;
+    /* Adjust as needed */
+    height: 40px;
+    /* Adjust as needed */
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* MENU LINKS */
+.menu {
+    flex-grow: 1;
+    margin: 10px 0;
+}
+
+/* ALIGN ICON + TEXT + ARROW PROPERLY */
+.menu a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 12px;
+    margin: 8px;
+    color: #d8e6dd;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    font-size: 14px;
+}
+
+/* LEFT SIDE: ICON + TEXT GROUP */
+.menu a span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* space between icon and text */
+}
+
+/* HOVER */
+.menu a:hover {
+    background: #313a50;
+    color: white;
+}
+
+/* ACTIVE */
+.menu a.active {
+    background: #2fb02f;
+    color: #ffffff;
+}
+
+/* ARROW */
+.menu a::after {
+    content: '❯';
+    font-size: 12px;
+    opacity: 0.5;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+/* ACTIVE ARROW COLOR */
+.menu a.active::after {
+    color: #ffffff;
+    opacity: 1;
+}
+
+/* ICON STYLE */
+.menu a i {
+    font-size: 18px;
+    color: white;
+}
+
+
+/* SIDEBAR BOTTOM (Profile/Logout) */
+.sidebar-bottom {
+    padding-top: 10px;
+    border-top: 1px solid #232b3d;
+    margin-top: auto;
+}
+
+.profile-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #232b3d;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.profile-name {
+    margin: 0;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.profile-role {
+    margin: 0;
+    font-size: 12px;
+    opacity: .7;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #505e7f;
+    margin: 15px 0;
+}
+
+.logout {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+.logout:hover {
+    opacity: 1;
+}
+
+/* --- CONTENT --- */
+.content {
+    margin-left: 270px;
+    padding: 30px;
+    margin-top: 0;
+}
+
+.content h1 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+/* ------------------------------------------- */
+/* --- DASHBOARD SPECIFIC STYLES --- */
+/* ------------------------------------------- */
+
+.top-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.full-control-row {
+    display: flex;
+    gap: 10px;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.full-control-row input[type="text"] {
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    flex-grow: 1;
+    min-width: 150px;
+}
+
+.full-control-row button[type="submit"] {
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: none;
+    background: #2fb02f;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    flex-shrink: 0;
+}
+
+.full-control-row button[type="submit"]:hover {
+    background: #27a127;
+}
+
+.top-row>button {
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    background: #2fb02f;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    font-weight: 500;
+    flex-shrink: 0;
+}
+
+.top-row>button:hover {
+    background: #135613;
+}
+
+/* Grid for Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 150px;
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #1b2130;
+}
+
+.go-btn {
+    background: #2fb02f;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    align-self: flex-end;
+    transition: background 0.2s;
+}
+
+.go-btn:hover {
+    background: #27a127;
+}
+
+
+/* ------------------------------------------- */
+/* --- INVENTORY SPECIFIC STYLES --- */
+/* ------------------------------------------- */
+
+/* TOP ROW: Lahat ng controls magkakalinya */
+.top-row-inventory {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+/* Container para sa Filters at Search Bar */
+.full-control-row-inventory {
+    display: flex;
+    gap: 10px;
+    flex-grow: 1;
+    align-items: center;
+}
+
+/* Search Input: Kailangan itong lumaki (flex-grow: 1) */
+.full-control-row-inventory input[type="text"] {
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    flex-grow: 1;
+    min-width: 150px;
+}
+
+/* Filters: Dapat hindi lumaki (flex-shrink: 0) */
+.full-control-row-inventory select {
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 14px;
+    min-width: 150px;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 14px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+
+/* Search Button: Dapat hindi lumaki (flex-shrink: 0) */
+.full-control-row-inventory button[type="submit"] {
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    background: #2fb02f;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    flex-shrink: 0;
+}
+
+.full-control-row-inventory button[type="submit"]:hover {
+    background: #135613;
+}
+
+/* Add Item Button */
+.top-row-inventory>button {
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    background: #2fb02f;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    font-weight: 500;
+    flex-shrink: 0;
+}
+
+.top-row-inventory>button:hover {
+    background: #135613;
+}
+
+
+/* --- TABLE STYLES --- */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0;
+    background: #ebeaea;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #7c7c7c
+}
+
+.table th {
+    background: #1b2130;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.table tr:hover {
+    background: #f1f1f1;
+}
+
+/* ------------------------------------------- */
+/* --- MODAL CENTERING AND DESIGN (FIXED) --- */
+/* ------------------------------------------- */
+
+/* Modal Backdrop: Sinasakop ang buong screen at ini-center ang laman */
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+
+    /* Walang display: flex/block/none sa default. 
+       Ang JS ang magse-set nito sa display: flex kapag binuksan. */
+    align-items: center;
+    /* Vertical Center */
+    justify-content: center;
+    /* Horizontal Center */
+}
+
+/* Modal Content: Ang form box na nasa gitna */
+.modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 450px;
+    max-height: 90vh;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    align-items: stretch;
+}
+
+/* Modal Heading */
+.modal-content h3 {
+    text-align: center;
+    width: 100%;
+    margin: 0 0 15px;
+    font-size: 24px;
+    color: #1b2130;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Modal Inputs */
+.modal-content input,
+.modal-content select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    text-align: left;
+    transition: border-color 0.2s;
+}
+
+.modal-content input:focus,
+.modal-content select:focus {
+    border-color: #2fb02f;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(47, 176, 47, 0.2);
+}
+
+/* Button container para sa Save at Cancel */
+.modal-buttons {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.modal-buttons button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.modal-content button[type="submit"] {
+    background: #2fb02f;
+    color: white;
+}
+
+.modal-content button[type="submit"]:hover {
+    background: #27a127;
+}
+
+.modal-content button[type="button"] {
+    background: #ccc;
+    color: #333;
+}
+
+.modal-content button[type="button"]:hover {
+    background: #bbb;
+}
